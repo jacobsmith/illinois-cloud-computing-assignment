@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     openvswitch-switch \
     openvswitch-testcontroller \
     php-cli \
+    php-xmlrpc \
     memcached \
     iperf \
     iperf3 \
