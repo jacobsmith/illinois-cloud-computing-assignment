@@ -2,6 +2,8 @@
 
 Archive of a 2017 cloud networking course. The project simulates a virtual datacenter using Mininet (network emulator) and Ryu (SDN controller).
 
+> **Note:** This repository contains no answers or solutions. It is a snapshot of the original course VirtualBox VM image, reformatted to run in Docker on modern hardware. The assignment code stubs are exactly as distributed to students in 2017.
+
 ## Prerequisites
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) for Mac
