@@ -1,0 +1,11 @@
+services:
+  mdc:
+    build: .
+    privileged: true      # required: Mininet needs raw Linux kernel networking
+    stdin_open: true
+    tty: true
+    ports:
+      - "8080:80"    # dashboard
+      - "8081:8081"  # video content
+    volumes:
+      - .:/app

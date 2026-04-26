@@ -1,0 +1,10 @@
+*.pyc
+minidc/config.txt
+minidc/dashboard/tenantplot.json
+minidc/dashboard/bwplot.json
+minidc/dashboard/bwshare.csv
+minidc/dashboard/droppedpkts.csv
+minidc/dashboard/memstats.json
+minidc/dashboard/roles.csv
+minidc/dashboard/tenants.csv
+minidc/dashboard/tenantshare.csv

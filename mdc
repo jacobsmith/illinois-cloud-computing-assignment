@@ -95,10 +95,18 @@ if __name__ == "__main__":
 
     # start php server for dashboard
     dashdir = os.path.join(mdcdir, "minidc", "dashboard")
-    phpsrv = subprocess.Popen(["php", "-S", "127.0.0.1:80",
+    phpsrv = subprocess.Popen(["php", "-S", "0.0.0.0:80",
                                "-t", dashdir],
                               stdout=open("/tmp/Dashboard.log", "wb"),
                               stderr=open("/tmp/Dashboard.err", "wb"))
+
+    # serve video content from the container's main namespace so it's
+    # reachable from the host at localhost:8081
+    viddir = os.path.join(mdcdir, "resources", "wwwroot")
+    vidsrv = subprocess.Popen(["php", "-S", "0.0.0.0:8081",
+                               "-t", viddir],
+                              stdout=open("/tmp/VideoServer.log", "wb"),
+                              stderr=open("/tmp/VideoServer.err", "wb"))
 
     net.start()
     dc.start()
